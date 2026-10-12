@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Lista de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="modo-claro">
+    <div class="container">
+        <h1>📝 Mi Lista de Tareas</h1>
+        <button id="btn-modo">Modo oscuro</button>
+
+        <form id="form-tarea">
+            <input type="text" id="input-tarea" placeholder="¿Qué necesitas hacer?" required>
+            <input type="date" id="fecha-limite">
+            <select id="categoria-tarea">
+                <option value="personal">Personal</option>
+                <option value="trabajo">Trabajo</option>
+                <option value="estudio">Estudio</option>
+            </select>
+            <button type="submit">Agregar</button>
+        </form>
+
+        <div class="filtros">
+            <button class="filtro activo" data-filtro="todas">Todas</button>
+            <button class="filtro" data-filtro="pendientes">Pendientes</button>
+            <button class="filtro" data-filtro="completadas">Completadas</button>
+        </div>
+
+        <h3>🔴 Tareas próximas a vencer</h3>
+        <ul id="lista‑por‑vencer"></ul>
+
+        <h3>📋 Todas las tareas</h3>
+        <ul id="lista-tareas"></ul>
+
+        <p class="contador">
+            <span id="contador-pendientes">0</span> tareas pendientes
+        </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
